@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://https://github.com/abskpandey/CICD.git' // use this if you're keeping your Jenkinsfile into other repo
+        //git branch: 'main', url: 'https://https://github.com/abskpandey/CICD.git' // use this if you're keeping your Jenkinsfile into other
       }
     }
     stage('Build and Test') {
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://34.201.116.83:9000"
+        SONAR_URL = "http://3.85.221.73:9000"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
